@@ -1,14 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import Box from './Box'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-
       <h1>Hello my name is Tuomas</h1>
-  
+      <Box name="Jeeves" title="CEO" location="Tampere" />
+      <Box name="Hannah" title="CEO" location="Tampere" />
+      <Box name="Jake" title="CEO" location="Tampere" />
     </>
   )
 }
