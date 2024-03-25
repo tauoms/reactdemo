@@ -7,3 +7,5 @@ const Box = (props) => {
       </div>
     )
   }
+
+  export default Box
