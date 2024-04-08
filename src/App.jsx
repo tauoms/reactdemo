@@ -3,6 +3,8 @@ import Box from "./Box";
 import Header from "./Header";
 import Footer from "./Footer";
 import Counter from "./Counter";
+import Form from "./Form";
+import View from "./View";
 import { useState } from "react";
 
 function App() {
@@ -12,6 +14,26 @@ function App() {
     { id: 2, name: "Hannah", title: "CTO", location: "Joensuu" },
     { id: 3, name: "Jake", title: "UFO", location: "Rauma" },
   ]);
+  const [inputValue, setInputValue] = useState("");
+  const [formData, setFormData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    tel: "",
+    message: "",
+  });
+
+  const changeHandler = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const changeFormHandler = (event) => {
+    const { name, value } = event.target; // Destructured
+
+    // open previous state, check if object has fname etc. and replace value
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    console.log(formData);
+  };
 
   function clickIncrease() {
     setCounter(counter + 1);
@@ -26,7 +48,16 @@ function App() {
   return (
     <>
       <Header />
-      <Counter
+      <Form changeFormHandler={changeFormHandler} />
+      <View
+        fname={formData.fname}
+        lname={formData.lname}
+        email={formData.email}
+        tel={formData.tel}
+        message={formData.message}
+      />
+
+      {/* <Counter
         counterProp={counter}
         clickIncrease={clickIncrease}
         clickDecrease={clickDecrease}
@@ -41,7 +72,7 @@ function App() {
             location={person.location}
           />
         ))}
-      </div>
+      </div> */}
       <Footer />
     </>
   );
