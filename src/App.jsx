@@ -1,5 +1,7 @@
 import "./App.css";
 import Box from "./Box";
+import Header from "./Header";
+import Footer from "./Footer";
 import { useState } from "react";
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <p>Counter: {counter}</p>
       <button onClick={clickIncrease}>Increase +1</button>
       <button onClick={clickDecrease}>Decrease -1</button>
@@ -34,6 +37,7 @@ function App() {
           location={person.location}
         />
       ))}
+      <Footer />
     </>
   );
 }
