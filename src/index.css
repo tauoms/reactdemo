@@ -33,6 +33,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 button {
@@ -89,4 +94,12 @@ footer {
   border-radius: 8px;
   margin: 20px 0;
   width: 260px;
+}
+
+.counterP {
+  background-color: #787998;
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
 }
