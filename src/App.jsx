@@ -32,14 +32,16 @@ function App() {
         clickDecrease={clickDecrease}
         clickResetCounter={clickResetCounter}
       />
-      {persons.map((person) => (
-        <Box
-          key={person.id}
-          name={person.name}
-          title={person.title}
-          location={person.location}
-        />
-      ))}
+      <div className="boxContainer">
+        {persons.map((person) => (
+          <Box
+            key={person.id}
+            name={person.name}
+            title={person.title}
+            location={person.location}
+          />
+        ))}
+      </div>
       <Footer />
     </>
   );
