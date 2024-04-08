@@ -49,13 +49,7 @@ function App() {
     <>
       <Header />
       <Form changeFormHandler={changeFormHandler} />
-      <View
-        fname={formData.fname}
-        lname={formData.lname}
-        email={formData.email}
-        tel={formData.tel}
-        message={formData.message}
-      />
+      <View {...formData} />
 
       {/* <Counter
         counterProp={counter}
