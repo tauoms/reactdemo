@@ -2,6 +2,7 @@ import "./App.css";
 import Box from "./Box";
 import Header from "./Header";
 import Footer from "./Footer";
+import Counter from "./Counter";
 import { useState } from "react";
 
 function App() {
@@ -25,10 +26,12 @@ function App() {
   return (
     <>
       <Header />
-      <p>Counter: {counter}</p>
-      <button onClick={clickIncrease}>Increase +1</button>
-      <button onClick={clickDecrease}>Decrease -1</button>
-      <button onClick={clickResetCounter}>Reset</button>
+      <Counter
+        counterProp={counter}
+        clickIncrease={clickIncrease}
+        clickDecrease={clickDecrease}
+        clickResetCounter={clickResetCounter}
+      />
       {persons.map((person) => (
         <Box
           key={person.id}

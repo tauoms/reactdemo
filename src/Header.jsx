@@ -1,5 +1,9 @@
 const Header = () => {
-  return <h1>Tuomas K</h1>;
+  return (
+    <header>
+      <h1>Tuomas K. React demo</h1>
+    </header>
+  );
 };
 
 export default Header;
