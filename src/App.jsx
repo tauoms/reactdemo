@@ -6,6 +6,10 @@ import Form from "./components/Form";
 import View from "./components/View";
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
+import Root from "./Root";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   // const [counter, setCounter] = useState(0);
@@ -50,23 +54,12 @@ function App() {
     setIsLoggedIn(!isLoggedIn); // Toggle between true & false
   };
 
-  return (
-    <>
-      <Header />
-      <a href="#">Click me</a>
+  const router = createBrowserRouter([
+    { path: "/", element: <Root /> },
+    { path: "/about", element: <About /> },
+  ]);
 
-      <button onClick={displayHandler}>
-        {isLoggedIn ? "Log out" : "Log in"}
-      </button>
-      {isLoggedIn && <Dashboard user="Steve" />}
-
-      {/* <Form changeFormHandler={changeFormHandler} /> */}
-      {/* Pass spread formData as prop */}
-      {/* <View {...formData} /> */}
-
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
