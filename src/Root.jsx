@@ -1,12 +1,13 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
     <>
       <Header />
       <main>
-        <h2>Content will be changing</h2>
+        <Outlet />
       </main>
       <Footer />
     </>

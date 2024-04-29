@@ -30,8 +30,25 @@ body {
   min-height: 100vh;
 }
 
+header {
+  padding: 0;
+}
+
 li {
   list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: centers;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
 }
 
 h1 {
