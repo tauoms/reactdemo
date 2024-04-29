@@ -1,11 +1,5 @@
 import "./App.css";
-import Box from "./components/Box";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Form from "./components/Form";
-import View from "./components/View";
 import { useState } from "react";
-import Dashboard from "./pages/Dashboard";
 import Root from "./Root";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
@@ -65,7 +59,6 @@ function App() {
         { path: "/persons", element: <Persons /> },
       ],
     },
-    ,
   ]);
 
   return <RouterProvider router={router} />;
