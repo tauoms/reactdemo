@@ -1,11 +1,11 @@
 import "./App.css";
-import Box from "./Box";
-import Header from "./Header";
-import Footer from "./Footer";
-import Form from "./Form";
+import Box from "./components/Box";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
 import View from "./View";
 import { useState } from "react";
-import Dashboard from "./Dashboard";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   // const [counter, setCounter] = useState(0);
