@@ -53,7 +53,11 @@ function App() {
   return (
     <>
       <Header />
-      <button onClick={displayHandler}>Switch</button>
+      <a href="#">Click me</a>
+
+      <button onClick={displayHandler}>
+        {isLoggedIn ? "Log out" : "Log in"}
+      </button>
       {isLoggedIn && <Dashboard user="Steve" />}
 
       {/* <Form changeFormHandler={changeFormHandler} /> */}
