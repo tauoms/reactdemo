@@ -46,10 +46,15 @@ function App() {
     setCounter(0);
   }
 
+  const displayHandler = () => {
+    setIsLoggedIn(!isLoggedIn); // Toggle between true & false
+  };
+
   return (
     <>
       <Header />
-      {isLoggedIn && <Dashboard user="Someone" />}
+      <button onClick={displayHandler}>Switch</button>
+      {isLoggedIn && <Dashboard user="Steve" />}
 
       {/* <Form changeFormHandler={changeFormHandler} /> */}
       {/* Pass spread formData as prop */}
