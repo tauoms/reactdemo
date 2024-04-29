@@ -3,7 +3,7 @@ import Box from "./components/Box";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
-import View from "./View";
+import View from "./components/View";
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 
