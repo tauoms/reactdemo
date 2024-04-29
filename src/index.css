@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #29505d;
+  color: #224b5d;
   text-decoration: inherit;
 }
 a:hover {
@@ -40,7 +40,7 @@ body {
 }
 
 main {
-  color: #7b8f98;
+  color: #9cb3be;
   border-radius: 8px;
   height: 100vh;
   margin-bottom: 0.5rem;
@@ -54,8 +54,13 @@ footer {
   margin: 0.5rem 0;
 }
 
+header {
+  background: linear-gradient(0deg, #5b686e 0%, #7b8f98 100%);
+}
+
 footer {
   margin-top: auto;
+  background: linear-gradient(0deg, #5b686e 0%, #7b8f98 100%);
 }
 
 footer p {
