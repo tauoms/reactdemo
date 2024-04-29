@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Persons from "./pages/Persons";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   // const [counter, setCounter] = useState(0);
@@ -52,6 +53,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      errorElement: <ErrorPage />,
       element: <Root />,
       children: [
         { path: "/", element: <Home /> },
