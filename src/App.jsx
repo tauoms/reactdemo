@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Persons from "./pages/Persons";
 import ErrorPage from "./pages/ErrorPage";
-
+// test
 function App() {
   // const [counter, setCounter] = useState(0);
   // const [persons, setPersons] = useState([
